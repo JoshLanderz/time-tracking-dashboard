@@ -1,0 +1,458 @@
+:root {
+    /*Primary*/
+    --Very-darkblue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --titles-overlay-bg: hsl(235, 42%, 32%);
+    --Blue: hsl(246, 80%, 60%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Soft-blue: hsl(195, 74%, 62%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+    --Light-red-work: hsl(15, 100%, 70%);
+    --Light-red-study: hsl(348, 100%, 68%);
+    --Lime-green: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --Soft-orange: hsl(43, 84%, 65%);
+
+    --ff-Rubik: 'Rubik', sans-serif;
+}
+
+img, p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+li, a, button, input {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    list-style-type: none;
+    text-decoration: none;
+    background: none;
+    border: none;
+}
+
+html, body {
+    height: 100%;
+    background-color: var(--Very-darkblue);
+    font-family: var(--ff-Rubik);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    transition: linear 0.2s;
+    margin-top: 3.5rem;
+}
+
+.report-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    transition: linear 0.2s;
+    gap: 2rem;
+}
+
+.report-card {
+    border-radius: 15px;
+    background-color: var(--Dark-blue);
+    width: 280px;
+    position: relative;
+    height: 520px;
+}
+
+.report-card-overlay {
+    position: absolute;
+    height: 62%;
+    width: 100%;
+    border-radius: 15px;
+    background-color: var(--Blue);
+    display: grid;
+    place-content: start;
+    padding-top: 25px;
+    gap: 45px;
+    transition: linear 0.2s;
+}
+
+.report-card-overlay > * {
+    margin-left: 25px;
+}
+
+.report-card-img {
+    width: 80px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.report-description {
+    display: grid;
+    gap: 3px;
+}
+
+.report-description :first-child {
+    color: var(--Pale-Blue);
+    font-size: 15px;
+}
+
+.report-name {
+    color: white;
+    font-weight: lighter;
+    font-size: 40px;
+    transition: linear 0.2s;
+}
+
+.report-topic-wrapper {
+    display: grid;
+    position: absolute;
+    margin-left: 25px;
+    gap: 20px;
+    bottom: 35px;
+    width: 100%;
+    transition: linear 0.2s;
+}
+
+.report-topic-links {
+    color: var(--Desaturated-blue);
+    font-size: 20px;
+    width: fit-content;
+    transition: linear .1s;
+}
+
+.report-topic-links:hover {
+    color: white;
+    border: none;
+    transition: linear .1s;
+}
+
+.titles-elements-wrapper {
+    display: grid;
+    gap: 30px;
+}
+
+.titles-wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+.titles-element {
+    overflow: hidden;
+    background-color: var(--Light-red-work);
+    position: relative;
+    border-radius: 15px;
+    width: 260px;
+    height: 245px;
+    transition: linear 0.2s;
+}
+
+.play {
+    background-color: var(--Soft-blue);
+}
+
+.study {
+    background-color: var(--Light-red-study);
+}
+
+.exercise {
+    background-color: var(--Lime-green);
+}
+
+.social {
+    background-color: var(--Violet);
+}
+
+.self-care {
+    background-color: var(--Soft-orange);
+}
+
+.titles-element > svg {
+    top: -9.5px;
+    right: 20px;
+    position: absolute;
+}
+
+.play svg {
+    top: -4px;
+}
+
+.exercise svg {
+    top: 0px;
+}
+
+.social svg {
+    top: -11px;
+}
+
+.titles-overlay {
+    position: absolute;
+    bottom: 0px;
+    height: 80%;
+    width: 100%;
+    border-radius: 15px;
+    background-color: var(--Dark-blue);
+    transition: linear 0.2s;
+}
+
+.titles-overlay:hover {
+    transition: linear 0.2s;
+    cursor: pointer;
+    background-color: var(--titles-overlay-bg);
+}
+
+.titles-nav {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dots > * :hover, :focus {
+    transition: linear 0.2s;
+    fill: white;
+}
+
+.titles-description {
+    display: grid;
+    gap: 5px;
+    padding-inline: 1.5rem;
+}
+
+.titles-description :first-child {
+    color: white;
+    font-size: 50px;
+    font-weight: lighter;
+    transition: linear 0.2s;
+}
+
+.titles-description :nth-child(2){
+    color: var(--Pale-Blue);
+}
+
+.topic-heading {
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 1180px) {
+    .titles-wrapper {
+        gap: 20px;
+        transition: linear 0.2s;
+    }
+
+    .report-container {
+        gap: 1.5rem;
+        transition: linear 0.2s;
+    }
+}
+
+@media screen and (max-width: 1165px) {
+    .report-card {  
+        width: 250px;
+        transition: linear 0.2s;
+    }
+}
+
+@media screen and (max-width: 1125px) {    
+    .titles-wrapper {
+        gap: 18px;
+    }
+
+    .titles-element {
+        width: 240px;
+        transition: linear 0.2s;
+    }
+}
+
+@media screen and (max-width: 1075px) {
+    .report-card {  
+        width: 230px;
+    }
+
+    .titles-element {
+        width: 220px;
+    }
+}
+
+@media screen and (max-width: 985px) {
+    .report-card {  
+        width: 200px;
+    }
+
+    .titles-element {
+        width: 200px;
+    }
+    
+    .report-name {
+        font-size: 35px;
+        transition: linear 0.2s;
+    }
+}
+
+@media screen and (max-width: 905px) {
+    .titles-element {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 895px) {
+    .titles-wrapper {
+        gap: 15px;
+    }
+
+    .titles-element {
+        width: 190px;
+    }
+}
+
+
+@media screen and (max-width: 860px) {
+    .report-card {  
+        width: 170px;
+        height: 475px;
+    }
+
+    .report-card-overlay {
+        height: 55%;
+    }
+
+    .report-topic-wrapper {
+        bottom: 40px;
+    }
+
+    .titles-elements-wrapper {
+        display: grid;
+        gap: 15px;
+    }
+
+    .titles-element {
+        width: 190px;
+        height: 230px;
+    }
+
+    .titles-description :first-child {
+        font-size: 35px;
+        transition: linear 0.2s;
+    }
+
+    .report-name {
+        font-size: 30px;
+        transition: linear 0.2s;
+    }
+}
+
+@media screen and (max-width: 835px) {
+    html, body {
+        margin-top: 1rem;
+    }
+    
+    .report-container {
+        display: grid;
+        justify-content: center;
+        align-items: flex-start;
+        transition: linear 0.2s;
+    }
+
+    .report-card {  
+        display: flex;
+        width: 600px;
+        height: 225px;
+    }
+
+    .report-card-overlay {
+        height: 100px;
+        padding-block: 30px;
+        gap: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .report-card-overlay > * {
+        margin-left: 0px;
+    }
+
+    .report-topic-wrapper {
+        display: flex;
+        position: relative;
+        justify-content: space-around;
+        margin-bottom: -240px;
+        margin-left: 0px;
+        width: 100%;
+        transition: linear 0.2s;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .titles-elements-wrapper {
+        display: grid;
+        gap: 20px;
+    }
+
+    .titles-wrapper {
+        display: grid;
+    }
+
+    .titles-element {
+        width: 100%;
+        height: 180px;
+    }
+
+    .titles-overlay {
+        height: 79%;
+    }
+
+    .titles-description {
+        margin-top: -12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .report-container > div {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .report-container > div {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .report-container > div {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .report-container > div {
+        width: 300px;
+    }
+    
+    .report-card-img {
+        width: 65px;
+        transition: linear 0.2s;
+    }
+
+    .report-name {
+        font-size: 20px;
+    }
+
+    .report-topic-wrapper {
+        padding-inline: 1rem;
+        transition: linear 0.2s;
+    }
+
+    .report-topic-links {
+        font-size: 17px;
+    }
+
+    .titles-description :first-child {
+        font-size: 25px;
+    }
+
+    .titles-description :nth-child(2){
+        font-size: 13px;
+    }
+}
